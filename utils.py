@@ -1,8 +1,10 @@
 from __future__ import division,print_function
 import math, os, json, sys, re
-import cPickle as pickle
+#import cPickle as pickle
 from glob import glob
 import numpy as np
+import matplotlib as mpl
+mpl.use('Agg')
 from matplotlib import pyplot as plt
 import seaborn as sns
 from operator import itemgetter, attrgetter, methodcaller
@@ -17,7 +19,7 @@ from PIL import Image
 #import cv2
 from numpy.random import random, permutation, randn, normal, uniform, choice
 from numpy import newaxis
-import ghalton
+#import ghalton
 import scipy
 from scipy import misc, ndimage
 from scipy.ndimage.interpolation import zoom
@@ -28,7 +30,7 @@ import h5py
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.manifold import TSNE
 
-from IPython.lib.display import FileLink
+#from IPython.lib.display import FileLink
 
 #import theano
 #from theano import shared, tensor as T
