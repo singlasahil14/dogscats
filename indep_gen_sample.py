@@ -146,14 +146,15 @@ def hyperparams_search(range_dict, get_loss_history, init_config={},
         f2.write(log_str)
     f2.close()
 
-#range_dict = {'width_shift_range': [0.05, 0.10, 0.15, 0.20, 0.25],
-#              'height_shift_range': [0.05, 0.10, 0.15, 0.20, 0.25],
-#              'rotation_range': [9, 18, 27, 36, 45],
-#              'shear_range': [0.05, 0.10, 0.15, 0.20, 0.25],
-#              'zoom_range': [0.05, 0.10, 0.15, 0.20, 0.25],
-#              'channel_shift_range': [8, 16, 24, 32, 40]}
-#hyperparams_search(range_dict, conv1)
+range_dict = {'width_shift_range': [0.10, 0.20, 0.30, 0.40, 0.50],
+              'height_shift_range': [0.10, 0.20, 0.30, 0.40, 0.50],
+              'rotation_range': [9, 18, 27, 36, 45],
+              'shear_range': [0.10, 0.20, 0.30, 0.40, 0.50],
+              'zoom_range': [0.10, 0.20, 0.30, 0.40, 0.50],
+              'channel_shift_range': [8, 16, 24, 32, 40]}
+range_dict = {'shear_range': [0.25, 0.30, 0.40, 0.50]}
+hyperparams_search(range_dict, conv1)
 
-range_dict = {'width_shift_range': [0.1, 0.2], 
-              'height_shift_range': [0.1, 0.2]}
-hyperparams_search(range_dict, conv1, num_configs=2, max_epochs=2)
+#range_dict = {'width_shift_range': [0.1, 0.2], 
+#              'height_shift_range': [0.1, 0.2]}
+#hyperparams_search(range_dict, conv1, num_configs=2, max_epochs=2)
